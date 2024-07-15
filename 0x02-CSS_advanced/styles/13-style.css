@@ -1,0 +1,99 @@
+/* Enable smooth scrolling for the entire document */
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%; /* Set base font size to 62.5% for easier rem calculations */
+}
+
+/* Define custom properties (CSS variables) */
+:root {
+    --color-primary: #d73953;
+    --color-black: #090909;
+    --color-white: #ffffff;
+    --color-light-grey: #f3f3f3;
+    --color-dark-grey: #353535;
+    --text-color: var(--color-black); /* Use the black color for general text */
+    --font-family-base: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Base font family */
+    --font-family-title: Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Font family for titles */
+    --font-size-small: 1.2rem; /* Small font size */
+    --font-size-medium: 1.6rem; /* Medium font size */
+    --font-size-large: 1.8rem; /* Large font size */
+    --font-size-x-large: 2.3rem; /* Extra large font size */
+    --font-size-xx-large: 4.8rem; /* Extra extra large font size */
+    --font-weight-regular: 400; /* Regular font weight */
+    --font-weight-bold: 700; /* Bold font weight */
+    --line-height-small: 1.2; /* Small line height */
+    --line-height-base: 1.5; /* Base line height */
+    --line-height-big: 1.8; /* Large line height */
+    --section-header-align: center; /* Center alignment for section headers */
+    --section-tagline-transform: uppercase; /* Uppercase transformation for section taglines */
+    --section-title-margin: 0; /* Zero margin for section titles */
+    --section-title-color: var(--color-black); /* Black color for section titles */
+}
+
+/* General body styles */
+body {
+    color: var(--text-color); /* Set text color */
+    font-family: var(--font-family-base); /* Set base font family */
+    font-size: var(--font-size-medium); /* Set base font size */
+    font-weight: var(--font-weight-regular); /* Set regular font weight */
+    line-height: var(--line-height-base); /* Set base line height */
+}
+
+/* Styles for all heading levels (h1-h6) */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-title); /* Set title font family */
+    font-weight: var(--font-weight-bold); /* Set bold font weight */
+}
+
+/* Link styles for non-visited links */
+a:link {
+    color: var(--text-color); /* Set link color */
+    text-decoration: none; /* Remove text decoration */
+}
+
+/* Link styles for visited links */
+a:visited {
+    font-style: italic; /* Italicize text */
+}
+
+/* Link styles for hovered links */
+a:hover {
+    text-decoration: underline; /* Underline text on hover */
+}
+
+/* Link styles for active links */
+a:active {
+    background-color: var(--color-light-grey); /* Set background color when active */
+}
+
+/* Hide elements with the class 'visually-hidden' */
+.visually-hidden {
+    display: none;
+}
+
+/* Styles for section headers */
+.section-header {
+    text-align: var(--section-header-align); /* Center align section headers */
+}
+
+/* Styles for section titles */
+.section-title {
+    font-family: var(--font-family-title); /* Set title font family */
+    font-size: var(--font-size-xx-large); /* Set extra extra large font size */
+    font-weight: var(--font-weight-bold); /* Set bold font weight */
+    margin: var(--section-title-margin); /* Set margin to zero */
+    color: var(--section-title-color); /* Set text color to black */
+}
+
+/* Styles for section taglines */
+.section-tagline {
+    color: var(--color-primary); /* Set primary color */
+    font-family: var(--font-family-title); /* Set title font family */
+    text-transform: var(--section-tagline-transform); /* Transform text to uppercase */
+    font-weight: var(--font-weight-bold); /* Set bold font weight */
+}
+
+/* Styles for card category */
+.card-category {
+    color: var(--color-primary); /* Set primary color */
+}
