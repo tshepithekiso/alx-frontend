@@ -1,0 +1,39 @@
+:root {
+    --button-display: inline-block;
+    --button-padding: 1.5rem 3rem;
+    --button-border: 0.2rem solid var(--color-primary);
+    --button-color: var(--color-black);
+    --button-text-decoration: none;
+    --button-font-size: var(--font-size-large);
+    --button-hover-color: var(--color-white);
+    --button-hover-text-decoration: none;
+    --button-hover-background: var(--color-primary);
+}
+/* Anchor link active state */
+a[href]:active {
+    background-color: var(--color-light-grey); /* Set background color */
+}
+
+/* Button class selector */
+.button {
+    display: var(--button-display); /* Set display */
+    padding: var(--button-padding); /* Set padding */
+    border: var(--button-border); /* Set border */
+    font-size: var(--button-font-size); /* Set font size */
+    color: var(--button-color); /* Set text color */
+    text-decoration: var(--button-text-decoration); /* Set text decoration */
+}
+
+/* Hover state for button class selector */
+.button:hover {
+    color: var(--button-hover-color); /* Set text color */
+    text-decoration: var(--button-hover-text-decoration); /* Set text decoration */
+    background-color: var(--button-hover-background); /* Set background color */
+}
+[data-section-theme="dark"] {
+    --text-color: var(--color-white); /* Existing property */
+    --section-title-color: var(--color-white); /* Existing property */
+    background-color: var(--color-black); /* Existing property */
+    --button-color: var(--color-white); /* New custom property */
+}
+
