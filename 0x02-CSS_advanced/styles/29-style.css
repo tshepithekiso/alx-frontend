@@ -1,0 +1,121 @@
+:root {
+    --button-display: inline-block;
+    --button-padding: 1.5rem 3rem;
+    --button-border: 0.2rem solid var(--color-primary);
+    --button-color: var(--color-black);
+    --button-text-decoration: none;
+    --button-font-size: var(--font-size-large);
+    --button-hover-color: var(--color-white);
+    --button-hover-text-decoration: none;
+    --button-hover-background: var(--color-primary);
+    --color-primary: #3498db; /* Example primary color */
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-light-grey: #f0f0f0;
+    --font-size-large: 1.25rem;
+    --header-padding: 4rem 0 0; /* New custom property */
+    --header-logo-position: relative; /* New custom property */
+    --header-logo-link-display: inline-block; /* New custom property */
+    --header-logo-link-position: absolute; /* New custom property */
+    --header-logo-link-top: -1rem; /* New custom property */
+    --header-logo-link-left: 0; /* New custom property */
+    --nav-item-link-hover: var(--color-white); /* Updated custom property */
+}
+
+/* Anchor link active state */
+a[href]:active {
+    background-color: var(--color-light-grey); /* Set background color */
+}
+
+/* Button class selector */
+.button {
+    display: var(--button-display); /* Set display */
+    padding: var(--button-padding); /* Set padding */
+    border: var(--button-border); /* Set border */
+    font-size: var(--button-font-size); /* Set font size */
+    color: var(--button-color); /* Set text color */
+    text-decoration: var(--button-text-decoration); /* Set text decoration */
+}
+
+/* Hover state for button class selector */
+.button:hover {
+    color: var(--button-hover-color); /* Set text color */
+    text-decoration: var(--button-hover-text-decoration); /* Set text decoration */
+    background-color: var(--button-hover-background); /* Set background color */
+}
+
+[data-section-theme="dark"] {
+    --text-color: var(--color-white); /* Existing property */
+    --section-title-color: var(--color-white); /* Existing property */
+    background-color: var(--color-black); /* Existing property */
+    --button-color: var(--color-white); /* New custom property */
+}
+
+/* Card testimonial selector */
+.card-testimonial {
+    text-align: center; /* Center align the text */
+}
+
+/* Card avatar inside card testimonial */
+.card-testimonial .card-avatar {
+    border-radius: 50%; /* Round the radius on all sides at 50% */
+    width: 10rem; /* Set the width to 10x the root element */
+    height: 10rem; /* Set the height to 10x the root element */
+}
+
+/* Cite inside card-quote inside card-testimonial */
+.card-testimonial .card-quote cite {
+    display: block; /* Style as a block level element */
+    padding-top: 1rem; /* Pad the top with 1x the root element */
+    color: var(--color-primary); /* Set the foreground color value to the value of the color-primary variable */
+}
+
+/* Section hero selector */
+.section-hero {
+    background-size: 90rem auto; /* Set the size of the background using 2-value syntax */
+}
+
+/* Section title inside section hero */
+.section-hero .section-title {
+    margin-bottom: 5rem; /* Add 5rem of margin to the bottom */
+}
+
+/* Section inner inside section hero */
+.section-hero .section-inner {
+    padding: 10rem 40rem 2rem 0; /* Add 10rem, 40rem, 2rem, and 0 to the padding on the top, right, bottom, left */
+}
+
+/* Header class selector */
+.header {
+    padding: var(--header-padding); /* Pad the header with the value within the variable header-padding */
+}
+
+/* Header logo class selector */
+.header-logo {
+    position: var(--header-logo-position); /* Position the header-logo with the value of the variable header-logo-position */
+}
+
+/* Link inside the header-logo class */
+.header-logo a {
+    display: var(--header-logo-link-display); /* Render the display using the value of the variable header-logo-link-display */
+    position: var(--header-logo-link-position); /* Position the links with the value of the variable header-logo-link-position */
+    top: var(--header-logo-link-top); /* Set the vertical position of the element using header-logo-link-top */
+    left: var(--header-logo-link-left); /* Set the horizontal position of the element using header-logo-link-left */
+}
+
+/* Nav-link before pseudo-elements inside nav */
+.nav .nav-link::before {
+    content: ''; /* Set the values of these elements to empty using content */
+    position: absolute; /* Absolutely position the targeted elements */
+    top: 0; /* Set the vertical position to 0 */
+    left: 0; /* Set the horizontal position of the targeted elements to 0 */
+    background-color: var(--color-white); /* Set the color of the background color of the targeted elements to the value color-white */
+    width: 0; /* The width of the targeted elements should be set to 0 */
+    height: 20%; /* Set the height to 20% of the root element value */
+}
+
+/* Nav-link before pseudo-elements when nav-item is hover and is inside nav */
+.nav .nav-item:hover .nav-link::before {
+    background-color: var(--color-primary); /* Set the background color of the elements to the variable color-primary */
+    width: 100%; /* Set the width of the elements to 100% */
+}
